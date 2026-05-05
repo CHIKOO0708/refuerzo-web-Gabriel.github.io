@@ -1,13 +1,385 @@
 <!DOCTYPE html>
-<html lang="en">
+<!--
+  index.html — Página principal del sitio web
+  Módulo: Mantenimiento y Aseguramiento de la Operación del Sistema Informático
+  Autor: Estudiante
+  Fecha: 2026
+
+  ESTRUCTURA:
+    <head>  → Metadatos, enlace a CSS, título de la pestaña
+    <body>  → Todo el contenido visible:
+                <nav>     → Barra de navegación
+                <header>  → Sección hero / portada
+                <main>    → Contenido principal (secciones)
+                <footer>  → Pie de página
+-->
+<html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EJEMPLO DE PAGINA WEB BASICA</title>
-    <H1>EJERCICIO DE FRANCISCO SEGOVIA</H1></H1>
+  <!-- charset: soporta acentos, ñ y emojis con UTF-8 -->
+  <meta charset="UTF-8">
+
+  <!-- viewport: escala correctamente en dispositivos móviles -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- description: texto que muestran los buscadores bajo el título (SEO) -->
+  <meta name="description" content="Página informativa sobre Mantenimiento y Aseguramiento del Sistema Informático">
+
+  <!-- title: texto que aparece en la pestaña del navegador -->
+  <title>Mantenimiento del Sistema Informático</title>
+
+  <!-- link: enlaza este HTML con el archivo de estilos CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-//* EN ESTA PARTE SE COLOCA TODO LO QUE VA CONTENER LA PAGINA WEB *//
-<P>Este es mi segundo repositorio con este archivo modificado</P>   
+
+  <!-- ============================================================
+       NAV — Barra de Navegación
+       href="#id" desplaza la página hasta la sección con ese id.
+       scroll-behavior: smooth (en CSS) hace la animación suave.
+       ============================================================ -->
+  <nav>
+    <div class="nav-inner">
+
+      <!-- Logo: enlace que lleva al inicio de la página -->
+      <a href="#inicio" class="nav-logo"></a>
+
+      <!-- Botón ☰ hamburguesa para móvil — llama a toggleMenu() en JS -->
+      <button class="nav-toggle" onclick="toggleMenu()" aria-label="Abrir menú">☰</button>
+
+      <!-- ul: lista de enlaces del menú
+           li: cada ítem   |   a: el enlace en sí
+           onclick="cerrarMenu()" cierra el menú al hacer clic en móvil -->
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#inicio"           onclick="cerrarMenu()">Inicio</a></li>
+        <li><a href="#tipos"            onclick="cerrarMenu()">Tipos</a></li>
+        <li><a href="#procedimiento"    onclick="cerrarMenu()">Procedimiento</a></li>
+        <li><a href="#herramientas"     onclick="cerrarMenu()">Herramientas</a></li>
+        <li><a href="#buenas-practicas" onclick="cerrarMenu()">Buenas Prácticas</a></li>
+      </ul>
+    </div>
+  </nav>
+
+
+  <!-- ============================================================
+       HEADER / HERO — Portada principal
+       id="inicio" es el ancla del primer link del menú.
+       ============================================================ -->
+  <header class="hero" id="inicio">
+
+
+    <!-- h1: título más importante de la página (solo uno por página) -->
+    <h1>Mantenimiento y Aseguramiento<br>del Sistema Informático</h1>
+
+  </header>
+
+
+  <!-- ============================================================
+       MAIN — Contenido principal
+       Cada <section> tiene un id único usado como ancla del menú.
+       ============================================================ -->
+  <main>
+    <div class="contenedor">
+
+
+      <!-- --------------------------------------------------------
+           SECCIÓN 1 — DEFINICIÓN
+           id="definicion" → href="#definicion" en el nav
+           -------------------------------------------------------- -->
+      <section id="definicion">
+        <h2 class="seccion-titulo">¿Qué es el Mantenimiento del Sistema?</h2>
+
+
+        <p>El <strong>mantenimiento y aseguramiento de la operación del sistema informático</strong>
+           comprende todas las actividades técnicas, preventivas y correctivas que garantizan
+           el funcionamiento continuo, seguro y óptimo de los equipos de cómputo, software
+           y redes de una organización.</p>
+
+        <br>
+
+        <!-- .grid-cards distribuye tarjetas automáticamente con CSS Grid -->
+        <div class="grid-cards">
+
+          
+
+        
+          </div>
+        </div>
+
+      <!-- --------------------------------------------------------
+           SECCIÓN 2 — TIPOS DE MANTENIMIENTO
+           -------------------------------------------------------- -->
+      <section id="tipos">
+        <h2 class="seccion-titulo">Tipos de Mantenimiento</h2>
+        <p class="seccion-desc">Clasificación según su momento de aplicación</p>
+
+        <div class="grid-cards">
+
+          <div class="card card-verde">
+            <span class="card-icon"></span>
+            <h3>Mantenimiento Preventivo</h3>
+            <p>Se realiza de forma programada <em>antes</em> de que ocurra una falla.
+               Incluye limpieza de componentes, actualización de software y
+               verificación de voltajes.</p>
+          </div>
+
+          <div class="card card-rojo">
+            <span class="card-icon"></span>
+            <h3>Mantenimiento Correctivo</h3>
+            <p>Se ejecuta <em>después</em> de que ocurre una falla. Busca restaurar
+               el sistema al estado operativo normal. Puede ser planificado
+               o de emergencia.</p>
+          </div>
+
+          <div class="card card-azul">
+            <span class="card-icon"></span>
+            <h3>Mantenimiento Predictivo</h3>
+            <p>Usa herramientas de monitoreo para <em>anticipar</em> fallas antes
+               de que ocurran, basándose en métricas del sistema en tiempo real.</p>
+          </div>
+
+          <div class="card card-azul">
+            <span class="card-icon"></span>
+            <h3>Mantenimiento Evolutivo</h3>
+            <p>Actualiza y mejora el sistema para adaptarlo a nuevas necesidades
+               o tecnologías. Incluye upgrades de hardware y migraciones de software.</p>
+          </div>
+
+          <div class="card card-verde">
+            <span class="card-icon"></span>
+            <h3>Mantenimiento de Datos</h3>
+            <p>Garantiza la integridad y respaldo de la información con rutinas
+               de backup, limpieza de base de datos y verificación de archivos.</p>
+          </div>
+
+          <div class="card card-rojo">
+            <span class="card-icon"></span>
+            <h3>Mantenimiento de Seguridad</h3>
+            <p>Actualización de parches, revisión de permisos, análisis antivirus
+               y auditorías de acceso para proteger el sistema de amenazas.</p>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- --------------------------------------------------------
+           SECCIÓN 3 — PROCEDIMIENTO
+           .lista-pasos usa CSS counters para numerar automáticamente.
+           No se necesita escribir los números en el HTML.
+           -------------------------------------------------------- -->
+      <section id="procedimiento">
+        <h2 class="seccion-titulo">Procedimiento de Mantenimiento</h2>
+        <p class="seccion-desc">Pasos estándar para ejecutar un mantenimiento preventivo</p>
+
+        <!-- ol con clase lista-pasos → los números los pone el CSS -->
+        <ol class="lista-pasos">
+          <li><strong>Inventario y diagnóstico inicial:</strong>
+              Registrar todos los equipos y componentes. Verificar el estado
+              actual y documentar configuraciones existentes.</li>
+
+          <li><strong>Respaldo de información (backup):</strong>
+              Antes de cualquier intervención, realizar copia de seguridad completa
+              de datos críticos en medios externos o en la nube.</li>
+
+          <li><strong>Limpieza física del equipo:</strong>
+              Limpiar internamente (polvo, conexiones) y externamente (teclado,
+              monitor, gabinete) con herramientas y materiales adecuados.</li>
+
+          <li><strong>Verificación de hardware:</strong>
+              Comprobar voltajes de la fuente, estado de la RAM, temperatura
+              del procesador y funcionamiento de ventiladores.</li>
+
+          <li><strong>Actualización de software y parches:</strong>
+              Instalar actualizaciones del sistema operativo, controladores
+              (drivers) y parches de seguridad pendientes.</li>
+
+          <li><strong>Análisis de seguridad:</strong>
+              Ejecutar escaneo completo con antivirus actualizado, revisar
+              el firewall y verificar logs de acceso al sistema.</li>
+
+          <li><strong>Pruebas de funcionamiento:</strong>
+              Comprobar que todos los servicios y aplicaciones críticas
+              funcionan correctamente tras las intervenciones.</li>
+
+          <li><strong>Documentación y reporte:</strong>
+              Registrar todo lo realizado: componentes reemplazados,
+              actualizaciones aplicadas y soluciones implementadas.</li>
+        </ol>
+
+        <!-- .nota: caja verde para buenas prácticas -->
+        <div class="nota">
+          <strong> Buena práctica:</strong> Toda intervención debe quedar registrada
+          en una bitácora indicando fecha, técnico responsable y acciones realizadas.
+        </div>
+      </section>
+
+
+      <!-- --------------------------------------------------------
+           SECCIÓN 4 — HERRAMIENTAS
+           Tabla con thead (encabezados) y tbody (datos).
+           border-collapse: collapse (en CSS) une los bordes de celdas.
+           -------------------------------------------------------- -->
+      <section id="herramientas">
+        <h2 class="seccion-titulo">Herramientas de Mantenimiento</h2>
+        <p class="seccion-desc">Software y utilidades esenciales para el técnico</p>
+
+        <!-- .tabla-wrapper permite scroll horizontal en pantallas pequeñas -->
+        <div class="tabla-wrapper">
+          <table>
+            <!-- thead: fila de encabezados de la tabla -->
+            <thead>
+              <tr>
+                <!-- th: celda de encabezado (negrita y fondo azul por CSS) -->
+                <th>Herramienta</th>
+                <th>Tipo</th>
+                <th>Función Principal</th>
+                <th>Sistema Operativo</th>
+              </tr>
+            </thead>
+
+            <!-- tbody: filas de datos de la tabla -->
+            <tbody>
+              <!-- tr: fila   |   td: celda de dato -->
+              <tr>
+                <td><strong>CrystalDiskInfo</strong></td>
+                <td>Hardware</td>
+                <td>Monitoreo de salud del disco duro (temperatura, sectores)</td>
+                <td>Windows</td>
+              </tr>
+              <tr>
+                <td><strong>CPU-Z</strong></td>
+                <td>Hardware</td>
+                <td>Información detallada de procesador, RAM y placa base</td>
+                <td>Windows</td>
+              </tr>
+              <tr>
+                <td><strong>Memtest86</strong></td>
+                <td>Diagnóstico</td>
+                <td>Prueba exhaustiva de memoria RAM para detectar errores</td>
+                <td>Multiplataforma</td>
+              </tr>
+              <tr>
+                <td><strong>Malwarebytes</strong></td>
+                <td>Seguridad</td>
+                <td>Detección y eliminación de malware, ransomware y spyware</td>
+                <td>Windows / Mac</td>
+              </tr>
+              <tr>
+                <td><strong>CCleaner</strong></td>
+                <td>Optimización</td>
+                <td>Limpieza de archivos temporales, registro y caché del sistema</td>
+                <td>Windows / Mac</td>
+              </tr>
+              <tr>
+                <td><strong>GParted</strong></td>
+                <td>Almacenamiento</td>
+                <td>Gestión y reparación de particiones de disco</td>
+                <td>Linux / Live USB</td>
+              </tr>
+              <tr>
+                <td><strong>Wireshark</strong></td>
+                <td>Red</td>
+                <td>Análisis de tráfico de red para detectar anomalías</td>
+                <td>Multiplataforma</td>
+              </tr>
+              <tr>
+                <td><strong>Acronis True Image</strong></td>
+                <td>Backup</td>
+                <td>Copia de seguridad completa del sistema y restauración</td>
+                <td>Windows / Mac</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+
+      <!-- --------------------------------------------------------
+           SECCIÓN 5 — BUENAS PRÁCTICAS
+           -------------------------------------------------------- -->
+      <section id="buenas-practicas">
+        <h2 class="seccion-titulo">Buenas Prácticas de Aseguramiento</h2>
+        <p class="seccion-desc">Recomendaciones para mantener sistemas seguros y operativos</p>
+
+        <div class="grid-cards">
+
+          <div class="card card-verde">
+            <span class="card-icon"></span>
+            <h3>Mantenimiento Programado</h3>
+            <p>Establecer un calendario de mantenimiento preventivo trimestral
+               o semestral y respetarlo, documentando cada visita.</p>
+          </div>
+
+          <div class="card card-verde">
+            <span class="card-icon"></span>
+            <h3>Política de Contraseñas</h3>
+            <p>Usar contraseñas fuertes (mínimo 12 caracteres) y cambiarlas
+               cada 90 días como mínimo en todos los sistemas críticos.</p>
+          </div>
+
+          <div class="card card-verde">
+            <span class="card-icon"></span>
+            <h3>Regla de Backup 3-2-1</h3>
+            <p>3 copias de los datos, en 2 medios distintos, con 1 copia
+               fuera del sitio (nube o ubicación externa).</p>
+          </div>
+
+          <div class="card card-azul">
+            <span class="card-icon"></span>
+            <h3>Documentación Actualizada</h3>
+            <p>Mantener inventarios, diagramas de red y manuales actualizados.
+               Un sistema sin documentación es un riesgo operativo.</p>
+          </div>
+
+          <div class="card card-azul">
+            <span class="card-icon"></span>
+            <h3>Capacitación al Personal</h3>
+            <p>El factor humano causa el 90% de los incidentes. Entrenar a
+               los usuarios en buenas prácticas digitales es esencial.</p>
+          </div>
+
+          <div class="card card-azul">
+            <span class="card-icon"></span>
+            <h3>Plan de Contingencia</h3>
+            <p>Tener un plan de recuperación ante desastres (DRP) que defina
+               los pasos a seguir en caso de falla crítica del sistema.</p>
+          </div>
+
+
+
+  <!-- ============================================================
+       SCRIPT — JavaScript para el menú hamburguesa en móvil
+       Se coloca al final del <body> para que el HTML ya esté
+       cargado cuando el JS se ejecute (mejor rendimiento).
+
+       toggleMenu() → agrega/quita la clase "abierto" al menú.
+         classList.toggle: si existe la clase la quita, si no existe la agrega.
+         El CSS hace visible el menú cuando tiene la clase .abierto
+
+       cerrarMenu() → quita la clase "abierto" al hacer clic en un link,
+         cerrando el menú automáticamente en pantallas móviles.
+       ============================================================ -->
+  <script>
+    // Obtiene la referencia al elemento <ul> del menú por su id
+    const navLinks = document.getElementById('nav-links');
+
+    /**
+     * toggleMenu — Abre o cierra el menú en dispositivos móviles.
+     * El CSS usa .nav-links.abierto { display: flex } para mostrarlo.
+     */
+    function toggleMenu() {
+      navLinks.classList.toggle('abierto');
+    }
+
+    /**
+     * cerrarMenu — Cierra el menú al hacer clic en cualquier enlace.
+     * Se llama desde el onclick de cada <a> del menú.
+     */
+    function cerrarMenu() {
+      navLinks.classList.remove('abierto');
+    }
+  </script>
+
 </body>
 </html>
