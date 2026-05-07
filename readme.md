@@ -1,4 +1,4 @@
-# Mantenimiento y Aseguramiento del Sistema Informático
+## Mantenimiento y Aseguramiento del Sistema Informático
 
 Página web informativa desarrollada como actividad del módulo.
 
@@ -22,16 +22,15 @@ proyecto/
 
 ## Tecnologías
 
-- **HTML5** — Estructura semántica
-- **CSS3** — Variables, Flexbox, Grid, Media Queries
-- **JavaScript** — Menú hamburguesa para móvil
+**HTML5** — Estructura semántica
+ **CSS3** — Variables, Flexbox, Grid, Media Queries
 
 ## Cómo usar
 
-1. Guardar los tres archivos en la misma carpeta
-2. Abrir index.html en el navegador
-3. Navegar con el menú superior
-4. En móvil usar el botón ☰
+ Guardar los tres archivos en la misma carpeta
+ Abrir index.html en el navegador
+ Navegar con el menú superior
+ En móvil usar el botón ☰
 
 ---
 Módulo: Mantenimiento y Aseguramiento de la Operación del Sistema Informático — 2026
