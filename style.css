@@ -429,7 +429,7 @@ footer strong {
     display: flex; /* Muestra el menú desplegable */
   }
 
-  /* Muestra el botón hamburguesa ☰ en móvil */
+  /* Muestra el botón  ☰ */
   .nav-toggle {
     display: block;
   }

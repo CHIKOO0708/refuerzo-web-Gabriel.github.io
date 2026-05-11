@@ -23,7 +23,7 @@ proyecto/
 ## Tecnologías
 
 **HTML5** — Estructura semántica
- **CSS3** — Variables, Flexbox, Grid, Media Queries
+**CSS3** — Variables, Flexbox, Grid, Media Queries
 
 ## Cómo usar
 
